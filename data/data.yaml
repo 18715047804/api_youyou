@@ -1,0 +1,19 @@
+login:
+  - - user: 杨飞1
+      psw: 123456
+    - code: 0
+      msg: login success!
+  - - user: 杨飞2
+      psw: 空
+    - code: 3003
+      msg: 账号或密码不正确
+  - - user: 空
+      psw: '234333'
+    - code: 3003
+      msg: 账号或密码不正确
+
+login2:
+  - - user: 杨飞1
+      psw: 123456
+    - code: 0
+      msg: login success!

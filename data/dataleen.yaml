@@ -1,0 +1,96 @@
+##yaml的 对象操作
+
+name: "lili"  #:后必须有空格  才能默认为字典   {'name': 'lili'}
+na1me: lili  # 也可以不加“” python中自动转换为字典 不推荐  {'name': 'lili'}
+name : {"name":"lili"}  #支持python的字典模式   打印是   {'name': {'name': 'lili'}}
+
+
+
+列表
+yaml列表类型
+一个短斜线代表列表里面的一个值 {打印出来是  {'data': ['lili', 18]}
+
+data:
+
+  - "lili"
+  -  18
+
+
+
+python中的字典数据类型
+data1: [1,2,3]
+
+ 列表包含字典
+date2:
+  - name: "lili"
+  - name: "jiji"
+打印出来是   {'date2': [{'name': 'lili'}, {'name': 'jiji'}]}
+
+
+
+以下1 2 3是纯量
+
+1 布尔类型
+name : true
+name1 : false
+打印出来是 {'name': True, 'name1': False}   用的特别少 几乎不同  了解即刻
+
+2python数据类型
+name : True
+nama1 : False
+打印出来是 {'name': True, 'name1': False}   用的特别少 几乎不同  了解即刻
+
+
+2整数
+name : 123
+
+3浮点数
+name1 : 12.3
+打印出来是 {'name': 123, 'name1': 12.3}
+
+
+
+空  波浪号
+name : ~
+打印 {'name': None}
+
+name : None  #不支出python数据类型  打印是 {'name': 'None'}
+
+name1 : null  #支持  {'name1': None}
+name2 : Null   #支持  {'name1': None}
+
+name3 : #支持  {'name1': None}
+name4: #支持  {'name1': None}
+
+name5 : ""  #不支持  返回的是字符串  {'name5': ''}
+
+
+日期
+日期类型
+年-月-日时:分:秒返回类型datetime.datetimevalue: 2019-11-11 12:12:12
+name: 2019-11-11 12:12:12
+
+年-月-日返回类型datetime.datevalue1: 2019-11-11
+name1: 2019-11-11
+
+时:分:秒返回value2: 12:12:12
+name3: 12:12:12  #这个打印出来是  {'name3': 43932} 返回的是整数   要加“”才行返回str=“12:12:12 ”
+
+name:
+  name1: "98998"
+  name2: 344
+
+
+date:
+  name :
+    name2 :
+      exprct :
+        value: "你好"
+      value : "你好"
+    name3 :
+      expet :
+        - 4
+        - 5
+        - 6
+    value : 456
+
